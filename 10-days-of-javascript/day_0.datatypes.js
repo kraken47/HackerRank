@@ -45,16 +45,24 @@ function performOperation(secondInteger, secondDecimal, secondString) {
     const firstString = 'HackerRank ';
     
     // Write code that uses console.log to print the sum of the 'firstInteger' and 'secondInteger' (converted to a Number        type) on a new line.
-    secondInteger = 12;
-    let sumInteger = firstInteger + Number(secondInteger);
+
+    let sumInteger = firstInteger + Number.parseInt(secondInteger);
     console.log(sumInteger);
     // Write code that uses console.log to print the sum of 'firstDecimal' and 'secondDecimal' (converted to a Number            type) on a new line.
-    secondDecimal = 4.32;
-    let sumDecimal = firstDecimal + Number(secondDecimal);
+
+    let sumDecimal = firstDecimal + Number.parseFloat(secondDecimal);
     console.log(sumDecimal);    
     // Write code that uses console.log to print the concatenation of 'firstString' and 'secondString' on a new line. The        variable 'firstString' must be printed first.
-    secondString = 'is the best place to learn and practice coding!';
+
     let concatStr = firstString.concat(secondString);
     console.log(concatStr);
 }
 
+
+function main() {
+    const secondInteger = readLine();
+    const secondDecimal = readLine();
+    const secondString = readLine();
+    
+    performOperation(secondInteger, secondDecimal, secondString);
+}
